@@ -1,0 +1,26 @@
+// SPDX-License-Identifier: (GPL-2.0-or-later OR BSD-2-Clause)
+/dts-v1/;
+
+#include "rtd1619.dtsi"
+
+/ {
+	compatible = "realtek,x1-prime-c", "realtek,rtd1619";
+	model = "Realtek RTD1619 X1 Prime C";
+
+	memory@2e000 {
+		device_type = "memory";
+		reg = <0x2e000 0x7ffd2000>;
+	};
+
+	chosen {
+		stdout-path = "serial0:115200n8";
+	};
+
+	aliases {
+		serial0 = &uart0;
+	};
+};
+
+&uart0 {
+	status = "okay";
+};

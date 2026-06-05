@@ -1,0 +1,30 @@
+if ARCH_REALTEK
+
+config TARGET_RTD1619
+	bool "Realtek RTD1619 chainloaded U-Boot"
+	select ARM64
+	select DM
+	select OF_CONTROL
+	help
+	  Minimal RTD1619 support intended to be chainloaded by the vendor
+	  bootloader after DRAM and EL3 firmware are already initialized.
+
+config SYS_CPU
+	default "armv8"
+
+config SYS_VENDOR
+	default "realtek"
+
+config SYS_BOARD
+	default "rtd1619"
+
+config SYS_SOC
+	default "realtek"
+
+config SYS_CONFIG_NAME
+	default "rtd1619"
+
+config DEFAULT_DEVICE_TREE
+	default "realtek/rtd1619-x1-prime-c"
+
+endif

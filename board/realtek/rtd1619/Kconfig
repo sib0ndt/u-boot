@@ -1,0 +1,12 @@
+if TARGET_RTD1619
+
+config SYS_BOARD
+	default "rtd1619"
+
+config SYS_VENDOR
+	default "realtek"
+
+config SYS_CONFIG_NAME
+	default "rtd1619"
+
+endif
