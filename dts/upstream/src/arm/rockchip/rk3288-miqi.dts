@@ -127,9 +127,9 @@
 	assigned-clock-parents = <&ext_gmac>;
 	clock_in_out = "input";
 	pinctrl-names = "default";
-	pinctrl-0 = <&rgmii_pins>, <&phy_rst>, <&phy_pmeb>, <&phy_int>;
+	pinctrl-0 = <&rmii_pins>, <&phy_rst>, <&phy_pmeb>, <&phy_int>;
 	phy-supply = <&vcc_lan>;
-	phy-mode = "rgmii";
+	phy-mode = "rmii";
 	snps,reset-active-low;
 	snps,reset-delays-us = <0 10000 1000000>;
 	snps,reset-gpio = <&gpio4 RK_PB0 GPIO_ACTIVE_LOW>;

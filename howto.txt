@@ -1,0 +1,13 @@
+Cara build u-boot:                                                                                                                    
+cd u-boot                                                                                                          
+make tismart-iot-3288a_defconfig ARCH=arm CROSS_COMPILE=arm-none-linux-gnueabihf-                                                                                                                
+make ARCH=arm CROSS_COMPILE=arm-none-linux-gnueabihf- -j2                                                                                                                       
+cd rkbin
+load address 0x01000000 (1000000 hex):                                                                             
+./tools/loaderimage --pack --uboot ../u-boot/u-boot-dtb.bin uboot.img 0x01000000
+cp ../u-boot/idbloader.img .
+
+dd if=idbloader.img of=/dev/sdc seek=64 bs=512
+dd if=uboot.img of=/dev/sdc seek=16384 bs=512                                                     
+         
+idbloader.img auto-generate saat build u-boot.
