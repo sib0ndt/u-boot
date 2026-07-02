@@ -1,0 +1,12 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+/*
+ * Copyright (C) 2017 sibondt <sibondt@me.com>
+ */
+
+/dts-v1/;
+#include "rk3288-vyasa.dts"
+
+/ {
+	model = "Tismart IoT-3288A";
+	compatible = "tismart,iot-3288a", "rockchip,rk3288";
+};

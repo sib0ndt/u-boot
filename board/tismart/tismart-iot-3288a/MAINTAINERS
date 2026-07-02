@@ -1,0 +1,7 @@
+TISMART IOT-3288A
+M:	sibondt <sibondt@me.com>
+S:	Maintained
+F:	board/tismart/tismart-iot-3288a
+F:	include/configs/tismart-iot-3288a.h
+F:	configs/tismart-iot-3288a_defconfig
+F:	arch/arm/dts/rk3288-tismart-iot-u-boot.dtsi

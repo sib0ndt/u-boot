@@ -117,6 +117,14 @@ config TARGET_VYASA_RK3288
 	  also includes on-board eMMC and 2GB of SDRAM. Expansion connectors
 	  provide access to display pins, I2C, SPI, UART and GPIOs.
 
+config TARGET_TISMART_IOT_3288A
+	bool "Tismart-IOT-3288A"
+	select BOARD_LATE_INIT
+	select TPL
+	help
+	  Tismart IOT-3288A is a RK3288-based development board.
+	  It shares Device Tree layout with Vyasa-RK3288.
+
 config TARGET_ROCK2
 	bool "Radxa Rock 2"
 	select BOARD_LATE_INIT
@@ -182,6 +190,8 @@ config TPL_TEXT_BASE
 	default 0xff704000
 
 source "board/amarula/vyasa-rk3288/Kconfig"
+
+source "board/tismart/tismart-iot-3288a/Kconfig"
 
 source "board/chipspark/popmetal_rk3288/Kconfig"
 

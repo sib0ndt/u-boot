@@ -1,0 +1,12 @@
+if TARGET_TISMART_IOT_3288A
+
+config SYS_BOARD
+	default "tismart-iot-3288a"
+
+config SYS_VENDOR
+	default "tismart"
+
+config SYS_CONFIG_NAME
+	default "tismart-iot-3288a"
+
+endif
