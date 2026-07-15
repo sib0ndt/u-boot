@@ -40,7 +40,7 @@ make O=output ${DEFCONFIG}
 # Show important config options
 echo ""
 echo ">>> Verifying extlinux support..."
-grep -E "CONFIG_CMD_PXE|CONFIG_CMD_SYSBOOT|CONFIG_DISTRO_DEFAULTS|CONFIG_BOOTMETH_EXTLINUX" .config || echo "WARNING: Extlinux support may not be enabled"
+grep -E "CONFIG_CMD_PXE|CONFIG_CMD_SYSBOOT|CONFIG_DISTRO_DEFAULTS|CONFIG_BOOTMETH_EXTLINUX" output/.config || echo "WARNING: Extlinux support may not be enabled"
 
 # Build
 echo ""
