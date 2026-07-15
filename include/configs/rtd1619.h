@@ -6,9 +6,11 @@
 #define CFG_SYS_INIT_SP_ADDR		0x07f00000
 #define CFG_SYS_BOOTM_LEN		0x04000000
 
-/* Extlinux/Distro boot support - USB only (device boots from USB) */
+/* Extlinux/Distro boot support - USB and MMC (eMMC & SD) */
 #define BOOT_TARGET_DEVICES(func) \
-	func(USB, usb, 0)
+	func(USB, usb, 0) \
+	func(MMC, mmc, 0) \
+	func(MMC, mmc, 1)
 
 #include <config_distro_bootcmd.h>
 
