@@ -41,7 +41,7 @@
 			device_type = "cpu";
 			compatible = "arm,cortex-a55";
 			reg = <0x81000000>;
-			enable-method = "spin-table";
+			enable-method = "none";
 			next-level-cache = <&l2>;
 		};
 
