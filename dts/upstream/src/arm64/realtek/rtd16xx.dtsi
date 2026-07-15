@@ -37,51 +37,51 @@
 		#address-cells = <1>;
 		#size-cells = <0>;
 
-		cpu0: cpu@0 {
+		cpu0: cpu@81000000 {
 			device_type = "cpu";
 			compatible = "arm,cortex-a55";
-			reg = <0x0>;
-			enable-method = "psci";
+			reg = <0x81000000>;
+			enable-method = "spin-table";
 			next-level-cache = <&l2>;
 		};
 
-		cpu1: cpu@100 {
+		cpu1: cpu@81000100 {
 			device_type = "cpu";
 			compatible = "arm,cortex-a55";
-			reg = <0x100>;
-			enable-method = "psci";
+			reg = <0x81000100>;
+			enable-method = "spin-table";
 			next-level-cache = <&l3>;
 		};
 
-		cpu2: cpu@200 {
+		cpu2: cpu@81000200 {
 			device_type = "cpu";
 			compatible = "arm,cortex-a55";
-			reg = <0x200>;
-			enable-method = "psci";
+			reg = <0x81000200>;
+			enable-method = "spin-table";
 			next-level-cache = <&l3>;
 		};
 
-		cpu3: cpu@300 {
+		cpu3: cpu@81000300 {
 			device_type = "cpu";
 			compatible = "arm,cortex-a55";
-			reg = <0x300>;
-			enable-method = "psci";
+			reg = <0x81000300>;
+			enable-method = "spin-table";
 			next-level-cache = <&l3>;
 		};
 
-		cpu4: cpu@400 {
+		cpu4: cpu@81000400 {
 			device_type = "cpu";
 			compatible = "arm,cortex-a55";
-			reg = <0x400>;
-			enable-method = "psci";
+			reg = <0x81000400>;
+			enable-method = "spin-table";
 			next-level-cache = <&l3>;
 		};
 
-		cpu5: cpu@500 {
+		cpu5: cpu@81000500 {
 			device_type = "cpu";
 			compatible = "arm,cortex-a55";
-			reg = <0x500>;
-			enable-method = "psci";
+			reg = <0x81000500>;
+			enable-method = "spin-table";
 			next-level-cache = <&l3>;
 		};
 
