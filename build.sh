@@ -40,7 +40,7 @@ make O=output ${DEFCONFIG}
 # Show important config options
 echo ""
 echo ">>> Verifying extlinux support..."
-grep -E "CONFIG_CMD_PXE|CONFIG_CMD_SYSBOOT|CONFIG_DISTRO_DEFAULTS" .config || echo "WARNING: Extlinux support may not be enabled"
+grep -E "CONFIG_CMD_PXE|CONFIG_CMD_SYSBOOT|CONFIG_DISTRO_DEFAULTS|CONFIG_BOOTMETH_EXTLINUX" .config || echo "WARNING: Extlinux support may not be enabled"
 
 # Build
 echo ""
@@ -54,10 +54,10 @@ echo "Build Complete!"
 echo "========================================="
 echo ""
 
-if [ -f u-boot.bin ]; then
-    U_BOOT_SIZE=$(stat -c%s u-boot.bin)
+if [ -f output/u-boot.bin ]; then
+    U_BOOT_SIZE=$(stat -c%s output/u-boot.bin)
     echo "✅ u-boot.bin: $U_BOOT_SIZE bytes"
-    ls -lh -r u-boot.bin
+    ls -lh output/u-boot.bin
 else
     echo "❌ u-boot.bin not found!"
     exit 1
@@ -65,7 +65,7 @@ fi
 
 echo ""
 echo "Output files:"
-ls -lh u-boot* 2>/dev/null | grep -v "\.o$" || true
+ls -lh output/u-boot* 2>/dev/null | grep -v "\.o$" || true
 
 echo ""
 echo "========================================="
